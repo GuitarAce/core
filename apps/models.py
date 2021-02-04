@@ -8,4 +8,4 @@ class ClassProject(models.Model):
     professorname = models.CharField(max_length=50)
 
     def __str__(self):
-        return self.namepj
+        return self.nameproject
