@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import ClassPj
+from .models import ClassProject
 # Register your models here.
-admin.site.register(ClassPj)
+admin.site.register(ClassProject)
