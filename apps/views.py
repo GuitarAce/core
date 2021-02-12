@@ -1,9 +1,25 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
+from django.contrib.auth.forms import UserCreationForm
 from .models import ClassProject, Project
-from .forms import ClassForm, ProjectForm
+from .forms import ClassForm, ProjectForm, CreateUserForm
 # Create your views here.
 def index(request):
     return render(request, "index.html")
+
+def loginPage(request):
+    return render(request, 'accouts/login.html')
+
+def registerPage(request):
+    form = CreateUserForm()
+
+    if request.method == 'POST':
+        form = CreateUserForm(request.POST)
+        if form.is_valid():
+            form.save()
+    
+    context = {'form':form}
+    return render(request,'accounts/register.html', context)
 
 def projectList(request):
     projects = Project.objects.all()
@@ -44,3 +60,4 @@ def projectDelete(request, id):
     except:
         pass
     return redirect('project-list')
+    
