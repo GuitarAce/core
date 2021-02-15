@@ -53,6 +53,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 TEMPLATE_DIR = os.path.join(BASE_DIR, "core/templates")
+LOGIN_REDIRECT_URL = "home"   # Route defined in app/urls.py
+LOGOUT_REDIRECT_URL = "home"  # Route defined in app/urls.py
 
 TEMPLATES = [
     {
