@@ -2,10 +2,11 @@ from django.db import models
 
 # Create your models here.
 
-class ClassProject(models.Model):
+class ProjectTopic(models.Model):
     nameproject = models.CharField(max_length=50)
     listproject = models.CharField(max_length = 50)
     professorname = models.CharField(max_length=50)
+    year = models.CharField(max_length=50)
 
     def __str__(self):
         return self.nameproject

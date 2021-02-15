@@ -1,11 +1,11 @@
 from django.forms import ModelForm
-from .models import ClassProject, Project
+from .models import ProjectTopic, Project
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-class ClassForm(ModelForm):
+class ProjectTopicssForm(ModelForm):
     class Meta:
-        model = ClassProject
+        model = ProjectTopic
         fields = '__all__'
 
 class ProjectForm(ModelForm):

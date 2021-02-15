@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ClassProject, Project
+from .models import ProjectTopic, Project
 # Register your models here.
-admin.site.register(ClassProject)
+admin.site.register(ProjectTopic)
 admin.site.register(Project)
