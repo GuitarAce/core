@@ -3,8 +3,8 @@ from apps import views
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('login/', views.loginPage, name='login'),
-    path('register/', views.registerPage, name="register"),
+    # path('login/', views.loginPage, name='login'),
+    # path('register/', views.registerPage, name="register"),
     path('project-list/', views.projectList, name='project-list'),
     path('project-create/', views.projectCreate, name='project-create'),
     path('project-edit/<int:id>', views.projectEdit, name='project-edit'),
