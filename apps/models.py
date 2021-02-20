@@ -11,14 +11,14 @@ class Project(models.Model):
 
 class ProjectTopic(models.Model):
     nameprojectTopic = models.CharField(db_column='nameprojectTopic',max_length=50)
-    listproject = models.ForeignKey(Project, on_delete=models.CASCADE)
+    # listproject = models.ForeignKey(Project, on_delete=models.CASCADE)
     professorname = models.CharField(db_column='professorname',max_length=50)
     def __str__(self):
         return self.nameprojectTopic
 
 class ProjectExam(models.Model):
     nameExam = models.CharField(db_column='nameExam',max_length=50)
-    listnames = models.ForeignKey(Project, on_delete=models.CASCADE)
+    # listnames = models.ForeignKey(Project, on_delete=models.CASCADE)
     def __str__(self):
         return self.nameExam
     class Meta:
