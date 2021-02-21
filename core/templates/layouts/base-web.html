@@ -9,13 +9,17 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="background-color: rgb(158, 255, 255);">
     {% include 'layouts/navbar.html' %}
-    {% block content %}
-        <div class="container">
-            
+    <main class="container">
+        <div class="card">
+            <div class="card-body">
+                {% block content %}
+                {% endblock content %}
+            </div>
         </div>
-    {% endblock content %}
+    </main>
+
 </body>
 
 </html>
